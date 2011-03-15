@@ -1,0 +1,5 @@
+0x00000000	gpio_regon_lock_init	/home/jongmu.choi/brcm/C110/buildroot/project_build_arm/jupiter/modules/bcm4329/dhd	EXPORT_SYMBOL_GPL
+0x00000000	gpio_wlan_poweron	/home/jongmu.choi/brcm/C110/buildroot/project_build_arm/jupiter/modules/bcm4329/dhd	EXPORT_SYMBOL_GPL
+0x00000000	gpio_wlan_poweroff	/home/jongmu.choi/brcm/C110/buildroot/project_build_arm/jupiter/modules/bcm4329/dhd	EXPORT_SYMBOL_GPL
+0x00000000	bcmsdh_remove	/share/OpenSource/SPH-D700_OpenSource/kernel/modules/bcm4329/dhd	EXPORT_SYMBOL
+0x00000000	bcmsdh_probe	/share/OpenSource/SPH-D700_OpenSource/kernel/modules/bcm4329/dhd	EXPORT_SYMBOL

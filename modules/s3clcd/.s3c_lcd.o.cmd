@@ -1,0 +1,1 @@
+cmd_/share/OpenSource/SPH-D700_OpenSource/kernel/modules/s3clcd/s3c_lcd.o := /opt/toolchains/arm-2009q3/bin/arm-none-linux-gnueabi-ld -EL    -r -o /share/OpenSource/SPH-D700_OpenSource/kernel/modules/s3clcd/s3c_lcd.o /share/OpenSource/SPH-D700_OpenSource/kernel/modules/s3clcd/s3clcd_module.o 

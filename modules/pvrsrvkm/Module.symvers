@@ -1,0 +1,2 @@
+0x00000000	PVRGetBufferClassJTable	/share/OpenSource/SPH-D700_OpenSource/kernel/modules/pvrsrvkm/pvrsrvkm	EXPORT_SYMBOL
+0x00000000	PVRGetDisplayClassJTable	/share/OpenSource/SPH-D700_OpenSource/kernel/modules/pvrsrvkm/pvrsrvkm	EXPORT_SYMBOL

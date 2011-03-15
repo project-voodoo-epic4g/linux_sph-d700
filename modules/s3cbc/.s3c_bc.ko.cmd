@@ -1,0 +1,1 @@
+cmd_/share/OpenSource/SPH-D700_OpenSource/kernel/modules/s3cbc/s3c_bc.ko := /opt/toolchains/arm-2009q3/bin/arm-none-linux-gnueabi-ld -EL -r   -o /share/OpenSource/SPH-D700_OpenSource/kernel/modules/s3cbc/s3c_bc.ko /share/OpenSource/SPH-D700_OpenSource/kernel/modules/s3cbc/s3c_bc.o /share/OpenSource/SPH-D700_OpenSource/kernel/modules/s3cbc/s3c_bc.mod.o

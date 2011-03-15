@@ -8,18 +8,15 @@ case "$1" in
 		echo "* Clean Kernel                                                                 *"
 		echo "********************************************************************************"
 
-		pushd linux-2.6.29
-		make clean
-		popd
-		pushd modules
+		pushd Kernel
 		make clean
 		popd
 		echo " It's done... "
 		exit
 		;;
 	*)
-		PROJECT_NAME=aries
-		HW_BOARD_REV="02"
+		PROJECT_NAME=SPH-D700
+		HW_BOARD_REV="03"
 		;;
 esac
 
@@ -27,10 +24,13 @@ if [ "$CPU_JOB_NUM" = "" ] ; then
 	CPU_JOB_NUM=8
 fi
 
+TARGET_LOCALE="vzw"
+
 TOOLCHAIN=`pwd`/../arm-2009q3/bin
 TOOLCHAIN_PREFIX=arm-none-eabi-
 
-KERNEL_BUILD_DIR=linux-2.6.29
+KERNEL_BUILD_DIR=`pwd`/Kernel
+ANDROID_OUT_DIR=`pwd`/Android/out/target/product/SPH-D700
 
 export PRJROOT=$PWD
 export PROJECT_NAME
@@ -53,10 +53,8 @@ BUILD_MODULE()
 	echo "************************************************************"
 	echo
 
-	pushd modules
-
-		make ARCH=arm CROSS_COMPILE=$TOOLCHAIN/$TOOLCHAIN_PREFIX
-
+	pushd Kernel
+		make ARCH=arm modules
 	popd
 }
 
@@ -72,14 +70,15 @@ BUILD_KERNEL()
 
 	export KDIR=`pwd`
 
-	make ARCH=arm $PROJECT_NAME"_rev"$HW_BOARD_REV"_defconfig"
+	make ARCH=arm victory_03_defconfig
 
 	# make kernel
-	make -j$CPU_JOB_NUM HOSTCFLAGS="-g -O2" ARCH=arm CROSS_COMPILE=$TOOLCHAIN/$TOOLCHAIN_PREFIX
+
+	make -j$CPU_JOB_NUM ARCH=arm CROSS_COMPILE=$TOOLCHAIN/$TOOLCHAIN_PREFIX
+
 
 	popd
 	
-	BUILD_MODULE
 }
 
 # print title

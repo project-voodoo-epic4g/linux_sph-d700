@@ -26,8 +26,8 @@ fi
 
 TARGET_LOCALE="vzw"
 
-TOOLCHAIN=`pwd`/../arm-2009q3/bin
-TOOLCHAIN_PREFIX=arm-none-eabi-
+TOOLCHAIN=/opt/toolchains/arm-2009q3/bin
+TOOLCHAIN_PREFIX=arm-none-linux-gnueabi-
 
 KERNEL_BUILD_DIR=`pwd`/Kernel
 ANDROID_OUT_DIR=`pwd`/Android/out/target/product/SPH-D700
@@ -70,7 +70,7 @@ BUILD_KERNEL()
 
 	export KDIR=`pwd`
 
-	make ARCH=arm victory_03_defconfig
+#	make ARCH=arm victory_03_defconfig
 
 	# make kernel
 
